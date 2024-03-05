@@ -1,6 +1,6 @@
 # RubberDucky-Script-for-Arduino-MKR-Zero
 
-This is a script for the Arduino MKR Zero board designed to emulate a RubberDucky device.
+This is a script for the ```Arduino MKR Zero``` board designed to emulate a RubberDucky device.
 
 <h2>Pre-requisites:</h2>
 
@@ -14,3 +14,5 @@ This is a script for the Arduino MKR Zero board designed to emulate a RubberDuck
 2. Upon successful execution of the DuckyScript, the LED on the Arduino board remains static, indicating completion.
 3. In the event of a fatal error during execution, the program halts, and the LED on the Arduino board blinks rapidly.
 4. Ensure the code.txt file is properly formatted with valid DuckyScript commands.
+
+<b>Note: REPEAT and REPLAY does not work, so you have to repeat tasks manually in ```code.txt```</b>
