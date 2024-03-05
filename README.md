@@ -3,6 +3,7 @@
 This is a script for the Arduino MKR Zero board designed to emulate a RubberDucky device.
 
 <h2>Pre-requisites:</h2>
+
 1. Suitable Arduino Board (Arduino MKR Zero in my case)
 2. A USB cable to connect to PC / Laptop / Mac
 3. An SD card with code.txt file specified with DuckyScript code
