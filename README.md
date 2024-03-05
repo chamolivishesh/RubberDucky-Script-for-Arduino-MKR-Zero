@@ -8,7 +8,7 @@ This is a script for the Arduino MKR Zero board designed to emulate a RubberDuck
 2. A USB cable to connect to PC / Laptop / Mac
 3. An SD card with code.txt file specified with DuckyScript code
 
-Here's how it operates:
+<h2>Here's how it operates:</h2>
 
 1. It reads the code.txt file from the SD card, containing DuckyScript commands, and executes them on the connected PC or laptop.
 2. Upon successful execution of the DuckyScript, the LED on the Arduino board remains static, indicating completion.
