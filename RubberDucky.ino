@@ -81,7 +81,7 @@ void setup() {
 	// Initialize SD Card
 	if (!SD.begin()) { // Pin number blank for Arduino MKR Zero
 		Serial.println("[-] SD initialization failed!");
-    errorLEDLoop();
+    		errorLEDLoop();
 		return;
 	} else {
 		Serial.println("[+] SD Initialized success!");
@@ -91,7 +91,7 @@ void setup() {
 	codeFile = SD.open("code.txt");
 	if (!codeFile) {
 		Serial.println("[-] Failed to open code.txt");
-    errorLEDLoop();
+   		errorLEDLoop();
 		return;
 	} else {
 		Serial.println("[+] code.txt found in SD Card.");
@@ -101,7 +101,7 @@ void setup() {
 	logFile = SD.open("log.txt", FILE_WRITE);
 	if (!logFile) {
 		Serial.println("[-] Failed to open log.txt");
-    errorLEDLoop();
+		errorLEDLoop();
 		return;
 	} else {
 		Serial.println("[+] log.txt opened in SD card.");
@@ -111,7 +111,7 @@ void setup() {
 
 	// Read each line from "code.txt"
 	Serial.println("[+] Starting Execution (REPLAY or REPEAT does not work)...\n");
-  int lineNum = 0; // Count line number
+  	int lineNum = 0; // Count line number
 	while (codeFile.available()) {
 		String line = codeFile.readStringUntil('\n');
 		if (line.length() > 0) {
@@ -147,16 +147,18 @@ void loop() {
 int executeCommand(String line, int lineNum) {
 	// Remove leading and trailing spaces
 	line.trim();
-  line.replace("    ", " "); // Removing all multiple spaces from substring
-  line.replace("   ", " "); // Removing all multiple spaces from substring
-  line.replace("  ", " "); // Removing all multiple spaces from substring
+	line.replace("     ", " "); // Removing all multiple spaces from substring
+	line.replace("    ", " "); // Removing all multiple spaces from substring
+	line.replace("   ", " "); // Removing all multiple spaces from substring
+	line.replace("  ", " "); // Removing all multiple spaces from substring
 
 	// Check if the line is empty after removing spaces
 	if (line.length() == 0) {
 		Serial.print("\n[ ] Info: Skipped line ");
 		Serial.print(lineNum);
 		Serial.println(" because it was empty");
-    // Small Blink for Info
+		
+        // Small Blink for Info
     digitalWrite(LED_BUILTIN, HIGH);
     delay (10);
     digitalWrite(LED_BUILTIN, LOW);
